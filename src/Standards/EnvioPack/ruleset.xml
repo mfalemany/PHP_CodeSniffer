@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<ruleset name="EnvioPack" xsi:noNamespaceSchemaLocation="../../../phpcs.xsd">
+	<description>EnvioPack coding standard.</description>
+	<arg name="tab-width" value="4"/>
+
+	<!-- ==================================================================================================================== -->
+	<!-- ===================================== PSR12 STANDARD =============================================================== -->
+	<!-- ==================================================================================================================== -->
+
+	<!-- Incluimos todo el estandar PSR12 -->
+	<rule ref="PSR12">
+		 <exclude name="PSR1.Classes.ClassDeclaration"/>
+	</rule>
+
+	<!-- ==================================================================================================================== -->
+	<!-- ===================================== GENERIC STANDARD ============================================================= -->
+	<!-- ==================================================================================================================== -->
+	
+	<rule ref="Generic.Commenting.DocComment"/>
+	
+	<rule ref="Generic.Formatting">
+		<exclude name="Generic.Formatting.NoSpaceAfterCast" />
+	</rule>
+	<rule ref="Generic.Formatting.MultipleStatementAlignment">
+		<properties>
+	        <property name="alignAtEnd" value="true" />
+	        <property name="error" value="true" />
+	    </properties>
+	</rule>
+
+	<!-- Establece la cantidad de espacios que se esperan despues de un casteo de valores: Ejemplo (int)$variable -->
+	<rule ref="Generic.Formatting.SpaceAfterCast">
+	    <properties>
+	        <property name="spacing" value="1" />
+	    </properties>
+	</rule>
+
+
+</ruleset>
